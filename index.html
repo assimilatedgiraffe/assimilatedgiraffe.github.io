@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+
+  
+  <title>Benjamin Fleming</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+
+  <style>
+  body {
+    margin-top:80px;
+    background-color:black
+  }
+
+  .container-fluid {
+    position: relative;
+    overflow: hidden;
+    color:#ccc
+  }
+  .container-fluid:before {
+    content:'  ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+  }
+
+  #about {
+  }
+
+  #websites:before {
+    background-image: url('https://dl.dropboxusercontent.com/u/10118584/code-bg.jpg');
+  }
+  #apps:before {
+    background-image: url('https://dl.dropboxusercontent.com/u/10118584/code-bg.png');
+  }
+  #other-projects:before {
+    background-image: url('https://dl.dropboxusercontent.com/u/10118584/music-bg.jpg');
+  }
+
+  </style>
+
+
+
+
+</head>
+
+<body translate="no" >
+
+  <head>
+    <title>Portfolio Page</title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+
+  <body data-spy="scroll" data-target=".navbar" style="position: relative">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Benjamin // Fleming</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#websites">Websites</a></li>
+        <li><a href="#apps">Apps</a></li>
+        <li><a href="#other-projects">Other Projects</a></li>
+      </ul>
+    </nav>
+    <div class=container>
+      <div class="jumbotron" id=about>
+        <div class=row>
+          <h1>Benjamin // Fleming</h1>
+          <div class=col-md-7>
+            <p class="lead"></p>
+            <p>Welcome to my website, home of the collected works of Benjamin Fleming. Scroll down for more. </p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Github</a>
+              <a class="btn btn-lg btn-primary" href="#" role="button">Codepen</a>
+              <a class="btn btn-lg btn-primary" href="#" role="button">FreeCodeCamp</a>
+              <a class="btn btn-lg btn-primary" href="#" role="button">Linkedin</a></p>
+            </div>
+            <div class=col-md-5>
+              <img src="https://dl.dropboxusercontent.com/u/10118584/streetview.jpg" class="img-responsive img-rounded" alt="streetview photo of me">
+            </div>
+          </div>
+        </div>
+        <div class=container-fluid id=websites>
+          <h1 class=text-center> &laquo; Website Portfolio &raquo;</h1>
+          <div class="row">
+            <div class="col-sm-6 col-md-6">
+              <a href="http://codepen.io/assimilatedgiraffe/full/grWyOG/" class="thumbnail">
+                <img src="https://dl.dropboxusercontent.com/u/10118584/tribute-screenshot.png" alt="...">
+                <div class="caption">
+                  <h3>Tribute Page</h3>
+                  <p>Tribute to Nicola Tesla, developed as part of a Free Code Camp challenge</p>
+                </div>
+              </a>
+
+            </div>
+            <div class="col-sm-6 col-md-6">
+              <div class="thumbnail">
+                <img src="https://dl.dropboxusercontent.com/u/10118584/Portfolio.png" alt="...">Thumbnail label
+                <div class="caption">
+                  <h3>Portfolio page</h3>
+                  <p>In order to understand recursion, you must first understand recursion.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=container-fluid id=apps>
+          <h1 class=text-center>Apps</h1>
+          <div class="row">
+            <div class="col-sm-6 col-md-6">
+              <div class="thumbnail">
+                <img src="https://dl.dropboxusercontent.com/u/10118584/xypadapp.png" alt="https://github.com/assimilatedgiraffe/XyPadApp">
+                <div class="caption">
+                  <h3>XYPad App</h3>
+                  <p>Android app built in python using the kivy framework. It's designed to allow multitouch control of plugin effect parameters in REAPER or any Digital Audio Workstation by transmiting over wifi using the Open Sound Control protocol.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+              <div class="thumbnail">
+                <img src="https://dl.dropboxusercontent.com/u/10118584/mindmapapp.png" alt="https://github.com/assimilatedgiraffe/darkmm">Thumbnail label
+                <div class="caption">
+                  <h3>Custom mind mapping app</h3>
+                  <p>Custom mind mapping application developed in python using the kivy framework.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=container-fluid id=other-projects>
+          <h1 class=text-center>Other Projects</h1>
+          <div class="row">
+            <div class="col-sm-6 col-md-6">
+              <div class="thumbnail">
+                <img src="https://dl.dropboxusercontent.com/u/10118584/civsim-screenshot.png" alt="https://civilsimian.bandcamp.com/">
+                <div class="caption">
+                  <h3>Civil Simian</h3>
+                  <p>Alt-rock band that I play keyboards for.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+              <div class="thumbnail">
+                <img src="https://dl.dropboxusercontent.com/u/10118584/bgo-screenshot.png" alt="https://soundcloud.com/bright-green-octopus">Thumbnail label
+                <div class="caption">
+                  <h3>Bright Green Octopus</h3>
+                  <p>Music production and promotion (I'm mainly involved in recording, production and live sound).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=row>
+        <img src="https://dl.dropboxusercontent.com/u/10118584/fb-photo2.jpg?raw=1" class="center-block img-responsive img-circle" alt="face" width=200px style=padding:50px>
+      </div>
+    </body>
+
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+
+
+
+
+
+  </body>
+  </html>
