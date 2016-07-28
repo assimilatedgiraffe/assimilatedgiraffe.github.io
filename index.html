@@ -3,17 +3,30 @@
 <head>
   <meta charset="UTF-8">
 
-  
+
   <title>Benjamin Fleming</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-
+<link href='https://fonts.googleapis.com/css?family=Noto+Serif:400italic|Roboto' rel='stylesheet' type='text/css'>
   <style>
   body {
-    margin-top:80px;
-    background-color:black
+    background-color:black;
+    font-family: 'Roboto', sans-serif;
+  }
+
+h1 {
+  font-family: 'Noto Serif', serif;
+}
+
+  .subtitle{
+    background-color: rgba(50, 50, 50, 0.5);
+    font-size: 20;
+    }
+
+  .navbar {
+    color: white;
   }
 
   .container-fluid {
@@ -37,6 +50,14 @@
   }
 
   #about {
+    background-image: url("ezgif.gif");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 100px 50px 200px 100px;
+    color: white;
+    font-size: 14;
+    height: 100vh
   }
 
   #websites:before {
@@ -48,49 +69,34 @@
   #other-projects:before {
     background-image: url('https://dl.dropboxusercontent.com/u/10118584/music-bg.jpg');
   }
-
-  </style>
-
-
-
-
-</head>
-
-<body translate="no" >
-
-  <head>
-    <title>Portfolio Page</title>
+</style>
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   </head>
 
   <body data-spy="scroll" data-target=".navbar" style="position: relative">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-header">
+    <nav class="navbar navbar-fixed-top">
+      <!-- <div class="navbar-header">
         <a class="navbar-brand" href="#">Benjamin // Fleming</a>
-      </div>
+      </div> -->
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#websites">Websites</a></li>
-        <li><a href="#apps">Apps</a></li>
-        <li><a href="#other-projects">Other Projects</a></li>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#websites">WEBSITES</a></li>
+        <li><a href="#apps">APPS</a></li>
+        <li><a href="#other-projects">OTHER PROJECTS</a></li>
       </ul>
     </nav>
-    <div class=container>
-      <div class="jumbotron" id=about>
+
+      <div class="container-fluid" id=about>
         <div class=row>
-          <h1>Benjamin // Fleming</h1>
+          <h1>"I'm not looking for judgment, <br>just a yes or no...</h1>
           <div class=col-md-7>
-            <p class="lead"></p>
-            <p>Welcome to my website, home of the collected works of Benjamin Fleming. Scroll down for more. </p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Github</a>
+          <p class="subtitle"><em>...can you assimilate a giraffe?" Welcome to AssimilatedGiraffe.com, home of the collected works of Benjamin Fleming. Scroll down for more. </em></p>
+            <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Github</a>
               <a class="btn btn-lg btn-primary" href="#" role="button">Codepen</a>
               <a class="btn btn-lg btn-primary" href="#" role="button">FreeCodeCamp</a>
-              <a class="btn btn-lg btn-primary" href="#" role="button">Linkedin</a></p>
-            </div>
-            <div class=col-md-5>
-              <img src="https://dl.dropboxusercontent.com/u/10118584/streetview.jpg" class="img-responsive img-rounded" alt="streetview photo of me">
+              <a class="btn btn-lg btn-primary" href="#" role="button">Linkedin</a></p> -->
             </div>
           </div>
         </div>
@@ -164,7 +170,7 @@
             </div>
           </div>
         </div>
-      </div>
+
       <div class=row>
         <img src="https://dl.dropboxusercontent.com/u/10118584/fb-photo2.jpg?raw=1" class="center-block img-responsive img-circle" alt="face" width=200px style=padding:50px>
       </div>
