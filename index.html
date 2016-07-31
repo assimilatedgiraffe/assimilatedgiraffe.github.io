@@ -9,25 +9,43 @@
 
 
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-<link href='https://fonts.googleapis.com/css?family=Noto+Serif:400italic|Roboto' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400italic|Roboto' rel='stylesheet' type='text/css'>
+
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+
+
   <style>
   body {
     background-color:black;
     font-family: 'Roboto', sans-serif;
   }
 
-h1 {
-  font-family: 'Noto Serif', serif;
-}
+  h1 {
+    font-family: 'Noto Serif', serif;
+  }
 
   .subtitle{
     background-color: rgba(50, 50, 50, 0.5);
     font-size: 20;
-    }
-
-  .navbar {
-    color: white;
   }
+
+  .navbar{
+    /*min-height: 70px;*/
+    // Animation
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+
+  .navbar a {
+    color: #FFFFFF;
+  }
+
+  nav.navbar.nav-scrolled {
+    background-color: black;
+    min-height: 35px;
+  }
+
 
   .container-fluid {
     position: relative;
@@ -49,11 +67,13 @@ h1 {
     background-position: 50% 0;
   }
 
-  #about {
+  #home {
     background-image: url("ezgif.gif");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-color: lightgrey;
+    background-blend-mode: multiply;
     padding: 100px 50px 200px 100px;
     color: white;
     font-size: 14;
@@ -69,119 +89,129 @@ h1 {
   #other-projects:before {
     background-image: url('https://dl.dropboxusercontent.com/u/10118584/music-bg.jpg');
   }
-</style>
-    <meta charset="utf-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  </head>
+  </style>
 
-  <body data-spy="scroll" data-target=".navbar" style="position: relative">
-    <nav class="navbar navbar-fixed-top">
-      <!-- <div class="navbar-header">
-        <a class="navbar-brand" href="#">Benjamin // Fleming</a>
-      </div> -->
+  <script>
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 50) {
+      $('.navbar').addClass('nav-scrolled');
+    } else {
+      $('.navbar').removeClass('nav-scrolled');
+    }
+  });
+  </script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" style="position: relative">
+  <nav class="navbar navbar-dark navbar-fixed-top">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#home">Benjamin // Fleming</a>
+    </div>
+    <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">HOME</a></li>
+        <li><a href="#home">HOME</a></li>
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#websites">WEBSITES</a></li>
         <li><a href="#apps">APPS</a></li>
         <li><a href="#other-projects">OTHER PROJECTS</a></li>
       </ul>
-    </nav>
+    </div>
+  </nav>
 
-      <div class="container-fluid" id=about>
-        <div class=row>
-          <h1>"I'm not looking for judgment, <br>just a yes or no...</h1>
-          <div class=col-md-7>
-          <p class="subtitle"><em>...can you assimilate a giraffe?" Welcome to AssimilatedGiraffe.com, home of the collected works of Benjamin Fleming. Scroll down for more. </em></p>
-            <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Github</a>
-              <a class="btn btn-lg btn-primary" href="#" role="button">Codepen</a>
-              <a class="btn btn-lg btn-primary" href="#" role="button">FreeCodeCamp</a>
-              <a class="btn btn-lg btn-primary" href="#" role="button">Linkedin</a></p> -->
-            </div>
-          </div>
-        </div>
-        <div class=container-fluid id=websites>
-          <h1 class=text-center> &laquo; Website Portfolio &raquo;</h1>
-          <div class="row">
-            <div class="col-sm-6 col-md-6">
-              <a href="http://codepen.io/assimilatedgiraffe/full/grWyOG/" class="thumbnail">
-                <img src="https://dl.dropboxusercontent.com/u/10118584/tribute-screenshot.png" alt="...">
-                <div class="caption">
-                  <h3>Tribute Page</h3>
-                  <p>Tribute to Nicola Tesla, developed as part of a Free Code Camp challenge</p>
-                </div>
-              </a>
-
-            </div>
-            <div class="col-sm-6 col-md-6">
-              <div class="thumbnail">
-                <img src="https://dl.dropboxusercontent.com/u/10118584/Portfolio.png" alt="...">Thumbnail label
-                <div class="caption">
-                  <h3>Portfolio page</h3>
-                  <p>In order to understand recursion, you must first understand recursion.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class=container-fluid id=apps>
-          <h1 class=text-center>Apps</h1>
-          <div class="row">
-            <div class="col-sm-6 col-md-6">
-              <div class="thumbnail">
-                <img src="https://dl.dropboxusercontent.com/u/10118584/xypadapp.png" alt="https://github.com/assimilatedgiraffe/XyPadApp">
-                <div class="caption">
-                  <h3>XYPad App</h3>
-                  <p>Android app built in python using the kivy framework. It's designed to allow multitouch control of plugin effect parameters in REAPER or any Digital Audio Workstation by transmiting over wifi using the Open Sound Control protocol.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-6">
-              <div class="thumbnail">
-                <img src="https://dl.dropboxusercontent.com/u/10118584/mindmapapp.png" alt="https://github.com/assimilatedgiraffe/darkmm">Thumbnail label
-                <div class="caption">
-                  <h3>Custom mind mapping app</h3>
-                  <p>Custom mind mapping application developed in python using the kivy framework.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class=container-fluid id=other-projects>
-          <h1 class=text-center>Other Projects</h1>
-          <div class="row">
-            <div class="col-sm-6 col-md-6">
-              <div class="thumbnail">
-                <img src="https://dl.dropboxusercontent.com/u/10118584/civsim-screenshot.png" alt="https://civilsimian.bandcamp.com/">
-                <div class="caption">
-                  <h3>Civil Simian</h3>
-                  <p>Alt-rock band that I play keyboards for.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-6">
-              <div class="thumbnail">
-                <img src="https://dl.dropboxusercontent.com/u/10118584/bgo-screenshot.png" alt="https://soundcloud.com/bright-green-octopus">Thumbnail label
-                <div class="caption">
-                  <h3>Bright Green Octopus</h3>
-                  <p>Music production and promotion (I'm mainly involved in recording, production and live sound).</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      <div class=row>
-        <img src="https://dl.dropboxusercontent.com/u/10118584/fb-photo2.jpg?raw=1" class="center-block img-responsive img-circle" alt="face" width=200px style=padding:50px>
+  <div class="container-fluid" id="home">
+    <div class=row>
+      <h1>"I'm not looking for judgment, <br>just a yes or no...</h1>
+      <div class=center-block>
+        <p class="subtitle"><em>...can you assimilate a giraffe?" Welcome to AssimilatedGiraffe.com, home of the collected works of Benjamin Fleming. Scroll down for more. </em></p>
+        <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Github</a>
+        <a class="btn btn-lg btn-primary" href="#" role="button">Codepen</a>
+        <a class="btn btn-lg btn-primary" href="#" role="button">FreeCodeCamp</a>
+        <a class="btn btn-lg btn-primary" href="#" role="button">Linkedin</a></p> -->
       </div>
-    </body>
+    </div>
+  </div>
+  <div class=container-fluid id=websites>
+    <h1 class=text-center> &laquo; Website Portfolio &raquo;</h1>
+    <div class="row">
+      <div class="col-sm-6 col-md-6">
+        <a href="http://codepen.io/assimilatedgiraffe/full/grWyOG/" class="thumbnail">
+          <img src="https://dl.dropboxusercontent.com/u/10118584/tribute-screenshot.png" alt="...">
+          <div class="caption">
+            <h3>Tribute Page</h3>
+            <p>Tribute to Nicola Tesla, developed as part of a Free Code Camp challenge</p>
+          </div>
+        </a>
 
-    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
-    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+      </div>
+      <div class="col-sm-6 col-md-6">
+        <div class="thumbnail">
+          <img src="https://dl.dropboxusercontent.com/u/10118584/Portfolio.png" alt="...">Thumbnail label
+          <div class="caption">
+            <h3>Portfolio page</h3>
+            <p>In order to understand recursion, you must first understand recursion.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=container-fluid id=apps>
+    <h1 class=text-center>Apps</h1>
+    <div class="row">
+      <div class="col-sm-6 col-md-6">
+        <div class="thumbnail">
+          <img src="https://dl.dropboxusercontent.com/u/10118584/xypadapp.png" alt="https://github.com/assimilatedgiraffe/XyPadApp">
+          <div class="caption">
+            <h3>XYPad App</h3>
+            <p>Android app built in python using the kivy framework. It's designed to allow multitouch control of plugin effect parameters in REAPER or any Digital Audio Workstation by transmiting over wifi using the Open Sound Control protocol.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-6">
+        <div class="thumbnail">
+          <img src="https://dl.dropboxusercontent.com/u/10118584/mindmapapp.png" alt="https://github.com/assimilatedgiraffe/darkmm">Thumbnail label
+          <div class="caption">
+            <h3>Custom mind mapping app</h3>
+            <p>Custom mind mapping application developed in python using the kivy framework.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=container-fluid id=other-projects>
+    <h1 class=text-center>Other Projects</h1>
+    <div class="row">
+      <div class="col-sm-6 col-md-6">
+        <div class="thumbnail">
+          <img src="https://dl.dropboxusercontent.com/u/10118584/civsim-screenshot.png" alt="https://civilsimian.bandcamp.com/">
+          <div class="caption">
+            <h3>Civil Simian</h3>
+            <p>Alt-rock band that I play keyboards for.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-6">
+        <div class="thumbnail">
+          <img src="https://dl.dropboxusercontent.com/u/10118584/bgo-screenshot.png" alt="https://soundcloud.com/bright-green-octopus">Thumbnail label
+          <div class="caption">
+            <h3>Bright Green Octopus</h3>
+            <p>Music production and promotion (I'm mainly involved in recording, production and live sound).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class=row>
+    <img src="https://dl.dropboxusercontent.com/u/10118584/fb-photo2.jpg?raw=1" class="center-block img-responsive img-circle" alt="face" width=200px style=padding:50px>
+  </div>
+</body>
 
 
 
 
-
-  </body>
-  </html>
+</html>
