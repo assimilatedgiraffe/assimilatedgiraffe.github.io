@@ -1,0 +1,87 @@
+
+body {
+  background-color:black;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-family: 'Noto Serif', serif;
+}
+
+.subtitle{
+  /*background-color: rgba(50, 50, 50, 0.5);*/
+  font-size: 20;
+}
+
+.navbar{
+  /*min-height: 70px;*/
+  // Animation
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.navbar a {
+  color: #FFFFFF;
+}
+
+nav.navbar.nav-scrolled {
+  background-color: black;
+  min-height: 35px;
+}
+
+
+/*.container-fluid {
+  position: relative;
+  overflow: hidden;
+  color:#ccc
+}
+.container-fluid:before {
+  content:'  ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.5;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}*/
+
+
+#home {
+  background-image: url("ezgif.gif");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: lightgrey;
+  background-blend-mode: multiply;
+  padding: 30vh 20vh 5vh 20vh;
+  color: white;
+  font-size: 14;
+  height: 100vh
+}
+
+#heading1 {
+  opacity: 0;
+}
+
+#heading2 {
+  text-indent: 10vh
+}
+
+.vertical-align {
+  display: flex;
+  align-items: center;
+}
+/*#websites:before {
+  background-image: url('https://dl.dropboxusercontent.com/u/10118584/code-bg.jpg');
+}
+#apps:before {
+  background-image: url('https://dl.dropboxusercontent.com/u/10118584/code-bg.png');
+}
+#other-projects:before {
+  background-image: url('https://dl.dropboxusercontent.com/u/10118584/music-bg.jpg');
+}*/

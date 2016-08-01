@@ -8,90 +8,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-  <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400italic|Roboto' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400italic|Roboto" rel="stylesheet" type="text/css">
 
-  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
-  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
-
-  <style>
-  body {
-    background-color:black;
-    font-family: 'Roboto', sans-serif;
-  }
-
-  h1 {
-    font-family: 'Noto Serif', serif;
-  }
-
-  .subtitle{
-    background-color: rgba(50, 50, 50, 0.5);
-    font-size: 20;
-  }
-
-  .navbar{
-    /*min-height: 70px;*/
-    // Animation
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-  }
-
-  .navbar a {
-    color: #FFFFFF;
-  }
-
-  nav.navbar.nav-scrolled {
-    background-color: black;
-    min-height: 35px;
-  }
-
-
-  .container-fluid {
-    position: relative;
-    overflow: hidden;
-    color:#ccc
-  }
-  .container-fluid:before {
-    content:'  ';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.5;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-  }
-
-  #home {
-    background-image: url("ezgif.gif");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-color: lightgrey;
-    background-blend-mode: multiply;
-    padding: 100px 50px 200px 100px;
-    color: white;
-    font-size: 14;
-    height: 100vh
-  }
-
-  #websites:before {
-    background-image: url('https://dl.dropboxusercontent.com/u/10118584/code-bg.jpg');
-  }
-  #apps:before {
-    background-image: url('https://dl.dropboxusercontent.com/u/10118584/code-bg.png');
-  }
-  #other-projects:before {
-    background-image: url('https://dl.dropboxusercontent.com/u/10118584/music-bg.jpg');
-  }
-  </style>
+  <link rel="stylesheet" href="style.css">
 
   <script>
+  $(document).ready(function() {
+  $("#heading1").animate({
+    opacity: 1
+  }, 3000);
+    $("#heading2").fadeIn();
+    $("#subtitle").fadeIn();
+  });
+
   $(window).scroll(function() {
     if ($(document).scrollTop() > 50) {
       $('.navbar').addClass('nav-scrolled');
@@ -124,19 +57,19 @@
   </nav>
 
   <div class="container-fluid" id="home">
-    <div class=row>
-      <h1>"I'm not looking for judgment, <br>just a yes or no...</h1>
-      <div class=center-block>
-        <p class="subtitle"><em>...can you assimilate a giraffe?" Welcome to AssimilatedGiraffe.com, home of the collected works of Benjamin Fleming. Scroll down for more. </em></p>
+    <div class="row">
+        <h1 id="heading1">"I'm not looking for judgment, </h1>
+        <h1 id="heading2">just a yes or no...</h1>
+        <p class="text-right subtitle"><em> <br>...can you assimilate a giraffe?" <br> - Rick Sanchez <br><br> Welcome to AssimilatedGiraffe.com, home of <br> the collected works of Benjamin Fleming</em></p>
+        <h1 class="text-center"> &#x2c5; </h1>
         <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Github</a>
         <a class="btn btn-lg btn-primary" href="#" role="button">Codepen</a>
         <a class="btn btn-lg btn-primary" href="#" role="button">FreeCodeCamp</a>
         <a class="btn btn-lg btn-primary" href="#" role="button">Linkedin</a></p> -->
-      </div>
     </div>
   </div>
-  <div class=container-fluid id=websites>
-    <h1 class=text-center> &laquo; Website Portfolio &raquo;</h1>
+  <div class="container-fluid" id="websites">
+    <h1 class="text-center"> &laquo; Website Portfolio &raquo;</h1>
     <div class="row">
       <div class="col-sm-6 col-md-6">
         <a href="http://codepen.io/assimilatedgiraffe/full/grWyOG/" class="thumbnail">
@@ -159,8 +92,8 @@
       </div>
     </div>
   </div>
-  <div class=container-fluid id=apps>
-    <h1 class=text-center>Apps</h1>
+  <div class="container-fluid" id="apps">
+    <h1 class="text-center">Apps</h1>
     <div class="row">
       <div class="col-sm-6 col-md-6">
         <div class="thumbnail">
@@ -182,8 +115,8 @@
       </div>
     </div>
   </div>
-  <div class=container-fluid id=other-projects>
-    <h1 class=text-center>Other Projects</h1>
+  <div class="container-fluid" id="other-projects">
+    <h1 class="text-center">Other Projects</h1>
     <div class="row">
       <div class="col-sm-6 col-md-6">
         <div class="thumbnail">
@@ -206,8 +139,8 @@
     </div>
   </div>
 
-  <div class=row>
-    <img src="https://dl.dropboxusercontent.com/u/10118584/fb-photo2.jpg?raw=1" class="center-block img-responsive img-circle" alt="face" width=200px style=padding:50px>
+  <div class="row">
+    <img src="https://dl.dropboxusercontent.com/u/10118584/fb-photo2.jpg?raw=1" class="center-block img-responsive img-circle" alt="face" width="200px" style="padding:50px">
   </div>
 </body>
 
