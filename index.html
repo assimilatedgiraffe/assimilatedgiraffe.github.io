@@ -18,11 +18,12 @@
 
   <script>
   $(document).ready(function() {
-  $("#heading1").animate({
-    opacity: 1
-  }, 3000);
-    $("#heading2").fadeIn();
-    $("#subtitle").fadeIn();
+    $("#heading1").animate({opacity:1}, 3000);
+    $("#heading2").delay(2000).animate({opacity:1}, 3000);
+    $("#subtitle1").delay(4000).animate({opacity:1}, 3000);
+    $("#subtitle2").delay(6000).animate({opacity:1}, 3000);
+    $("nav").delay(6000).animate({opacity:1}, 3000);
+    $("#home").delay(1000).removeClass('darken');
   });
 
   $(window).scroll(function() {
@@ -60,8 +61,11 @@
     <div class="row">
         <h1 id="heading1">"I'm not looking for judgment, </h1>
         <h1 id="heading2">just a yes or no...</h1>
-        <p class="text-right subtitle"><em> <br>...can you assimilate a giraffe?" <br> - Rick Sanchez <br><br> Welcome to AssimilatedGiraffe.com, home of <br> the collected works of Benjamin Fleming</em></p>
-        <h1 class="text-center"> &#x2c5; </h1>
+        <p class="text-right subtitle" id="subtitle1"><em>...can you assimilate a giraffe?" <br> - Rick Sanchez <br><br> </em></p>
+        <p class="text-center subtitle" id="subtitle2">Welcome to AssimilatedGiraffe.com, home of <br> the collected works of Benjamin Fleming</p>
+        <div class="row down-arrow center-block">
+          <a href="#websites"> <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a>
+        </div>
         <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Github</a>
         <a class="btn btn-lg btn-primary" href="#" role="button">Codepen</a>
         <a class="btn btn-lg btn-primary" href="#" role="button">FreeCodeCamp</a>

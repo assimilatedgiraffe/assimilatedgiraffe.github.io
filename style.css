@@ -8,9 +8,23 @@ h1 {
   font-family: 'Noto Serif', serif;
 }
 
-.subtitle{
+nav {
+  opacity: 0;
+}
+.subtitle {
   /*background-color: rgba(50, 50, 50, 0.5);*/
-  font-size: 20;
+  padding-top: 10vh;
+  font-size: 20px;
+  opacity: 0;
+}
+
+.down-arrow {
+  text-align: center;
+}
+
+.down-arrow a {
+  font-size: 30px;
+  color: white;
 }
 
 .navbar{
@@ -56,12 +70,16 @@ nav.navbar.nav-scrolled {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: lightgrey;
+  background-color: #666;
   background-blend-mode: multiply;
-  padding: 30vh 20vh 5vh 20vh;
+  padding: 20vh 20vh 5vh 20vh;
   color: white;
   font-size: 14;
   height: 100vh
+}
+
+#home.darken {
+  background-color: black;
 }
 
 #heading1 {
@@ -69,6 +87,7 @@ nav.navbar.nav-scrolled {
 }
 
 #heading2 {
+  opacity: 0;
   text-indent: 10vh
 }
 
