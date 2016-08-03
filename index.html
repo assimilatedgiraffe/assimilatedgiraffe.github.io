@@ -14,29 +14,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 
-  <script>
-  $(document).ready(function() {
-    $("#heading1").animate({opacity:1}, 3000);
-    $("#heading2").delay(2000).animate({opacity:1}, 3000);
-    $("#subtitle1").delay(4000).animate({opacity:1}, 3000);
-    $("#subtitle2").delay(6000).animate({opacity:1}, 3000);
-    $("#subtitle1").delay(0000).animate({opacity:0.5}, 1000);
-    $("#heading1").delay(4000).animate({opacity:0.5}, 1000);
-    $("#heading2").delay(2000).animate({opacity:0.5}, 1000);
-    $("nav").delay(6000).animate({opacity:1}, 3000);
-    $("#home").delay(1000).removeClass('darken');
-  });
-
-  $(window).scroll(function() {
-    if ($(document).scrollTop() > 50) {
-      $('.navbar').addClass('nav-scrolled');
-    } else {
-      $('.navbar').removeClass('nav-scrolled');
-    }
-  });
-  </script>
+  <script src="js/script.js"></script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" style="position: relative">
@@ -52,7 +32,6 @@
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#home">HOME</a></li>
-        <li><a href="#about">ABOUT</a></li>
         <li><a href="#websites">WEBSITES</a></li>
         <li><a href="#apps">APPS</a></li>
         <li><a href="#other-projects">OTHER PROJECTS</a></li>
@@ -66,8 +45,8 @@
         <h1 id="heading2">just a yes or no...</h1>
         <p class="text-right subtitle" id="subtitle1"><em>...can you assimilate a giraffe?" <br> - Rick Sanchez <br><br> </em></p>
         <p class="text-center subtitle" id="subtitle2">Welcome to AssimilatedGiraffe.com, home of <br> the collected works of Benjamin Fleming</p>
-        <div class="row down-arrow center-block">
-          <a href="#websites"> <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a>
+        <div class="row down-arrow center-block" >
+          <a href="#websites"> <span class="glyphicon glyphicon-chevron-down" id="down-arrow" aria-hidden="true"></span></a>
         </div>
         <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Github</a>
         <a class="btn btn-lg btn-primary" href="#" role="button">Codepen</a>
@@ -79,8 +58,8 @@
     <h1 class="text-center"> &laquo; Websites &raquo;</h1>
     <div class="row">
       <div class="col-sm-6 col-md-6">
-        <a href="http://codepen.io/assimilatedgiraffe/full/grWyOG/" class="thumbnail">
-          <img src="https://dl.dropboxusercontent.com/u/10118584/tribute-screenshot.png" alt="...">
+        <a href="https://assimilatedgiraffe.github.io/tribute-page/" class="thumbnail">
+          <img src="img/tribute-screenshot.png" alt="...">
           <div class="caption">
             <h3>Tribute Page</h3>
             <p>Tribute to Nicola Tesla, developed as part of a Free Code Camp challenge</p>
@@ -89,13 +68,13 @@
 
       </div>
       <div class="col-sm-6 col-md-6">
-        <div class="thumbnail">
-          <img src="https://dl.dropboxusercontent.com/u/10118584/Portfolio.png" alt="...">Thumbnail label
+        <a href="#" class="thumbnail">
+          <img src="img/portfolio.png" alt="...">
           <div class="caption">
             <h3>Portfolio page</h3>
             <p>In order to understand recursion, you must first understand recursion.</p>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>
@@ -103,22 +82,22 @@
     <h1 class="text-center">&laquo; Apps &raquo;</h1>
     <div class="row">
       <div class="col-sm-6 col-md-6">
-        <div class="thumbnail">
-          <img src="https://dl.dropboxusercontent.com/u/10118584/xypadapp.png" alt="https://github.com/assimilatedgiraffe/XyPadApp">
+        <a href="https://github.com/assimilatedgiraffe/XyPadApp" class="thumbnail">
+          <img src="img/xypadapp.png" alt="">
           <div class="caption">
             <h3>XYPad App</h3>
             <p>Android app built in python using the kivy framework. It's designed to allow multitouch control of plugin effect parameters in REAPER or any Digital Audio Workstation by transmiting over wifi using the Open Sound Control protocol.</p>
           </div>
-        </div>
+        </a>
       </div>
       <div class="col-sm-6 col-md-6">
-        <div class="thumbnail">
-          <img src="https://dl.dropboxusercontent.com/u/10118584/mindmapapp.png" alt="https://github.com/assimilatedgiraffe/darkmm">Thumbnail label
+        <a href="https://github.com/assimilatedgiraffe/darkmm" class="thumbnail">
+          <img src="img/mindmapapp.png" alt="">
           <div class="caption">
             <h3>Custom mind mapping app</h3>
             <p>Custom mind mapping application developed in python using the kivy framework.</p>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>
@@ -126,22 +105,22 @@
     <h1 class="text-center">&laquo; Other Projects &raquo;</h1>
     <div class="row">
       <div class="col-sm-6 col-md-6">
-        <div class="thumbnail">
-          <img src="https://dl.dropboxusercontent.com/u/10118584/civsim-screenshot.png" alt="https://civilsimian.bandcamp.com/">
+        <a href="https://civilsimian.bandcamp.com/" class="thumbnail">
+          <img src="img/civsim-screenshot.png" alt="">
           <div class="caption">
             <h3>Civil Simian</h3>
             <p>Alt-rock band that I play keyboards for.</p>
           </div>
-        </div>
+        </a>
       </div>
       <div class="col-sm-6 col-md-6">
-        <div class="thumbnail">
-          <img src="https://dl.dropboxusercontent.com/u/10118584/bgo-screenshot.png" alt="https://soundcloud.com/bright-green-octopus">Thumbnail label
+        <a href="https://soundcloud.com/bright-green-octopus" class="thumbnail">
+          <img src="img/bgo-screenshot.png" alt="">
           <div class="caption">
             <h3>Bright Green Octopus</h3>
             <p>Music production and promotion (I'm mainly involved in recording, production and live sound).</p>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>
