@@ -1,6 +1,7 @@
 
 body {
   background-color:black;
+  color: white;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -94,6 +95,23 @@ nav.navbar.nav-scrolled {
 .vertical-align {
   display: flex;
   align-items: center;
+}
+
+#websites {
+  background-color: #010;
+}
+
+#apps {
+  background-color: #100;
+}
+
+#other-projects {
+  background-color: #010;
+}
+
+.thumbnail {
+  padding: 20px;
+  margin: 40px;
 }
 /*#websites:before {
   background-image: url('https://dl.dropboxusercontent.com/u/10118584/code-bg.jpg');
