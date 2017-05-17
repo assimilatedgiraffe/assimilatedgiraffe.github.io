@@ -1,14 +1,33 @@
   $(document).ready(function() {
     $("#heading1").animate({opacity:1}, 3000);
-    $("#heading2").delay(2000).animate({opacity:1}, 3000);
-    $("#subtitle1").delay(4000).animate({opacity:1}, 3000);
-    $("#subtitle2").delay(6000).animate({opacity:1}, 3000);
-    $("#subtitle1").delay(0000).animate({opacity:0.5}, 1000);
+    // $("#heading2").delay(2000).animate({opacity:1}, 3000);
+    // $("#subtitle1").delay(4000).animate({opacity:1}, 3000);
+    // $("#subtitle2").delay(6000).animate({opacity:1}, 3000);
+    // $("#subtitle1").delay(0000).animate({opacity:0.5}, 1000);
     $("#heading1").delay(4000).animate({opacity:0.5}, 1000);
-    $("#heading2").delay(2000).animate({opacity:0.5}, 1000);
+    // $("#heading2").delay(2000).animate({opacity:0.5}, 1000);
     $("nav").delay(6000).animate({opacity:1}, 3000);
     $("#down-arrow").delay(6000).animate({opacity:1}, 3000);
-    $("#home").delay(1000).removeClass('darken');
+    // $("#home").delay(1000).removeClass('darken');
+    // var i= 0;
+    // var array1 = $("#subtitle").value.split("\n");
+    // for ( i = 0; i < array1.length; i++) {
+    //   var elem = $("#subtitle");
+    //   var newElem = elem.cloneNode(true);
+    //   newElem.value = array1[i];
+    //   elem.parent.insertBefore(newElem, elem.nextSibling);
+    //   newElem.animate({opacity:1}, 1000);
+    //
+    // }
+    for ( i = 0; i < 8; i++) {
+      $("#subtitle" + i).delay(i * 1000).animate({opacity:1}, 1000);
+    };
+
+
+
+
+
+
   });
 
   $(window).scroll(function() {
