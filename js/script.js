@@ -6,8 +6,8 @@
     // $("#subtitle1").delay(0000).animate({opacity:0.5}, 1000);
     $("#heading1").delay(4000).animate({opacity:0.5}, 1000);
     // $("#heading2").delay(2000).animate({opacity:0.5}, 1000);
-    $("nav").delay(6000).animate({opacity:1}, 3000);
-    $("#down-arrow").delay(6000).animate({opacity:1}, 3000);
+    $("nav").delay(4000).animate({opacity:1}, 3000);
+    $("#down-arrow").delay(4000).animate({opacity:1}, 3000);
     // $("#home").delay(1000).removeClass('darken');
     // var i= 0;
     // var array1 = $("#subtitle").value.split("\n");
@@ -20,24 +20,23 @@
     //
     // }
     for ( i = 0; i < 8; i++) {
-      $("#subtitle" + i).delay(i * 1000).animate({opacity:1}, 1000);
+      $("#subtitle" + i).delay(i * 500).animate({opacity:1}, 700);
     };
-
-
-
-
-
 
   });
 
+
+// nav bar transparency on scroll
+  var Vheight = $(window).height();
   $(window).scroll(function() {
-    if ($(document).scrollTop() > 50) {
+    if ($(document).scrollTop() > Vheight - 60) {
       $('.navbar').addClass('nav-scrolled');
     } else {
       $('.navbar').removeClass('nav-scrolled');
     }
   });
 
+// animated scrolling
   $(function() {
     $('a[href*="#"]:not([href="#"])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

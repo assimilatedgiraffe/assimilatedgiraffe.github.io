@@ -27,13 +27,16 @@ nav {
 .down-arrow a {
   font-size: 30px;
   color: white;
+  padding: 20vh 0 0 0;
 }
 
 .navbar{
   /*min-height: 70px;*/
-  // Animation
+  /*Animation*/
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  background-color: transparent;
+  box-shadow: 0 0 0 0 white;
 }
 
 .navbar a {
@@ -76,7 +79,7 @@ nav.navbar.nav-scrolled {
   background-blend-mode: multiply;
   padding: 20vh 0 5vh 0;
   color: white;
-  font-size: 14;
+  font-size: 14px;
   height: 100vh
 }
 
@@ -92,27 +95,42 @@ nav.navbar.nav-scrolled {
   opacity: 0;
 }
 
-#heading2 {
+/*#heading2 {
   opacity: 0;
   text-indent: 10vh
-}
+}*/
 
 .vertical-align {
   display: flex;
   align-items: center;
 }
 
-#websites {
+.heading-overlay {
+  position: absolute;
+  z-index: 15;
   background-color: #010;
+  padding: 7px !important;
+  margin: 0 !important;
+  /*opacity: 0.9;*/
 }
 
-#apps {
-  background-color: #100;
+.heading2 {
+  background-color: black;
+  margin: 0;
+  padding: 20px 10px 10px 10px !important;
+}
+
+.row-no-padding {
+  background-image: linear-gradient(to right, black, black 50%, black 50%, #010);
+}
+
+/*#apps {
+  background-color: black;
 }
 
 #other-projects {
   background-color: #010;
-}
+}*/
 
 .thumbnail {
   padding: 20px;
@@ -161,7 +179,7 @@ nav.navbar.nav-scrolled {
   -moz-transform:scale(1.20); /* Firefox */
   -ms-transform:scale(1.20); /* IE 9 */
   -o-transform:translatZ(0) scale(1.20); /* Opera */
-  transform:translatZ(0) scale(1.20);
+  transform: scale(1.20);
 }
 
 .caption2 {
