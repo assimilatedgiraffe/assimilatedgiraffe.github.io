@@ -19,7 +19,7 @@
   <script src="js/script.js"></script>
 </head>
 
-<body data-spy="scroll" data-target=".navbar" style="position: relative">
+<body id="bootstrap-overrides" data-spy="scroll" data-target=".navbar" style="position: relative">
   <nav class="navbar navbar-dark navbar-fixed-top">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -41,10 +41,20 @@
 
   <div class="container-fluid" id="home">
     <div class="row">
-        <h1 id="heading1">"I'm not looking for judgment, </h1>
-        <h1 id="heading2">just a yes or no...</h1>
-        <p class="text-right subtitle" id="subtitle1"><em>...can you assimilate a giraffe?" <br> - Rick Sanchez <br><br> </em></p>
-        <p class="text-center subtitle" id="subtitle2">Welcome to AssimilatedGiraffe.com, home of <br> the collected works of Benjamin Fleming</p>
+      <div class="col-md-6">
+        <img src="img/face.jpg" class="img-responsive img-circle center-block" alt="face" width="150px">
+        <h1 id="heading1" class="text-center">Benjamin <br> Fleming</h1>
+      </div>
+      <div class="col-md-6">
+        <p class="subtitle" id="subtitle0">Tinker </p>
+        <p class="subtitle" id="subtitle1">Tailor</p>
+        <p class="subtitle" id="subtitle2">Solderer </p>
+        <p class="subtitle" id="subtitle3">Syncer    </p>
+        <p class="subtitle" id="subtitle4">Tech Man </p>
+        <p class="subtitle" id="subtitle5">Code Man</p>
+        <p class="subtitle" id="subtitle6">Music Man </p>
+        <p class="subtitle" id="subtitle7">Dev </p>
+      </div>
         <div class="row down-arrow center-block" >
           <a href="#websites"> <span class="glyphicon glyphicon-chevron-down" id="down-arrow" aria-hidden="true"></span></a>
         </div>
@@ -56,11 +66,11 @@
   </div>
   <div class="container-fluid" id="websites">
     <h1 class="text-center"> &laquo; Websites &raquo;</h1>
-    <div class="row">
+    <div class="row row-no-padding">
       <div class="col-sm-6 col-md-6">
-        <a href="https://assimilatedgiraffe.github.io/tribute-page/" class="thumbnail">
-          <img src="img/tribute-screenshot.png" alt="...">
-          <div class="caption">
+        <a href="https://assimilatedgiraffe.github.io/tribute-page/" class="thumbnail2">
+          <img class="img-responsive" src="img/tribute-screenshot.png" alt="...">
+          <div class="caption2">
             <h3>Tribute Page</h3>
             <p>Tribute to Nicola Tesla, developed as part of a Free Code Camp challenge</p>
           </div>
@@ -68,9 +78,9 @@
 
       </div>
       <div class="col-sm-6 col-md-6">
-        <a href="#" class="thumbnail">
-          <img src="img/portfolio.png" alt="...">
-          <div class="caption">
+        <a href="#" class="thumbnail2">
+          <img class="img-responsive" src="img/portfolio.png" alt="...">
+          <div class="caption2">
             <h3>Portfolio page</h3>
             <p>In order to understand recursion, you must first understand recursion.</p>
           </div>
@@ -80,20 +90,20 @@
   </div>
   <div class="container-fluid" id="apps">
     <h1 class="text-center">&laquo; Apps &raquo;</h1>
-    <div class="row">
+    <div class="row row-no-padding">
       <div class="col-sm-6 col-md-6">
-        <a href="https://github.com/assimilatedgiraffe/XyPadApp" class="thumbnail">
-          <img src="img/xypadapp.png" alt="">
-          <div class="caption">
+        <a href="https://github.com/assimilatedgiraffe/XyPadApp" class="thumbnail2">
+          <img class="img-responsive" src="img/xypadapp.png" alt="">
+          <div class="caption2">
             <h3>XYPad App</h3>
             <p>Android app built in python using the kivy framework. It's designed to allow multitouch control of plugin effect parameters in REAPER or any Digital Audio Workstation by transmiting over wifi using the Open Sound Control protocol.</p>
           </div>
         </a>
       </div>
       <div class="col-sm-6 col-md-6">
-        <a href="https://github.com/assimilatedgiraffe/darkmm" class="thumbnail">
+        <a href="https://github.com/assimilatedgiraffe/darkmm" class="thumbnail2">
           <img src="img/mindmapapp.png" alt="">
-          <div class="caption">
+          <div class="caption2">
             <h3>Custom mind mapping app</h3>
             <p>Custom mind mapping application developed in python using the kivy framework.</p>
           </div>
@@ -103,20 +113,20 @@
   </div>
   <div class="container-fluid" id="other-projects">
     <h1 class="text-center">&laquo; Other Projects &raquo;</h1>
-    <div class="row">
+    <div class="row row-no-padding">
       <div class="col-sm-6 col-md-6">
-        <a href="https://civilsimian.bandcamp.com/" class="thumbnail">
+        <a href="https://civilsimian.bandcamp.com/" class="thumbnail2">
           <img src="img/civsim-screenshot.png" alt="">
-          <div class="caption">
+          <div class="caption2">
             <h3>Civil Simian</h3>
             <p>Alt-rock band that I play keyboards for.</p>
           </div>
         </a>
       </div>
       <div class="col-sm-6 col-md-6">
-        <a href="https://soundcloud.com/bright-green-octopus" class="thumbnail">
+        <a href="https://soundcloud.com/bright-green-octopus" class="thumbnail2">
           <img src="img/bgo-screenshot.png" alt="">
-          <div class="caption">
+          <div class="caption2">
             <h3>Bright Green Octopus</h3>
             <p>Music production and promotion (I'm mainly involved in recording, production and live sound).</p>
           </div>
