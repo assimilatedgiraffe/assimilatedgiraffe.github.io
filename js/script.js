@@ -23,18 +23,30 @@
       $("#subtitle" + i).delay(i * 500).animate({opacity:1}, 700);
     };
 
+    // nav bar transparency on landing page, desktop only
+      if ($(window).width() > 768) {
+        $('.navbar').addClass('nav-transparent');
+      }
+
+      $(window).scroll(function() {
+        if ($(document).scrollTop() < $(window).height() - 60 && $(window).width() > 768) {
+          $('.navbar').addClass('nav-transparent');
+        } else {
+          $('.navbar').removeClass('nav-transparent');
+        }
+      });
+
+    // autohide mobile nav on click
+    $('.navbar-collapse a').click(function (e) {
+        $('.navbar-collapse').collapse('toggle');
+      });
   });
 
 
-// nav bar transparency on scroll
-  var Vheight = $(window).height();
-  $(window).scroll(function() {
-    if ($(document).scrollTop() > Vheight - 60) {
-      $('.navbar').addClass('nav-scrolled');
-    } else {
-      $('.navbar').removeClass('nav-scrolled');
-    }
-  });
+
+
+
+
 
 // animated scrolling
   $(function() {
