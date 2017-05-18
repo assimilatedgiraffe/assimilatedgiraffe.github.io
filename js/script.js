@@ -1,13 +1,13 @@
   $(document).ready(function() {
-    $("#heading1").animate({opacity:1}, 3000);
+    $("#heading1").animate({opacity:1}, 2000);
     // $("#heading2").delay(2000).animate({opacity:1}, 3000);
     // $("#subtitle1").delay(4000).animate({opacity:1}, 3000);
     // $("#subtitle2").delay(6000).animate({opacity:1}, 3000);
     // $("#subtitle1").delay(0000).animate({opacity:0.5}, 1000);
-    $("#heading1").delay(3500).animate({opacity:0.5}, 3000);
+    $("#heading1").delay(6000).animate({opacity:0.5}, 3000);
     // $("#heading2").delay(2000).animate({opacity:0.5}, 1000);
-    $("nav").delay(3500).animate({opacity:1}, 3000);
-    $(".down-arrow").delay(3500).animate({opacity:1}, 3000);
+    $("nav").delay(6000).animate({opacity:1}, 3000);
+    // $(".down-arrow").delay(3500).animate({opacity:1}, 3000);
     // $("#home").delay(1000).removeClass('darken');
     // var i= 0;
     // var array1 = $("#subtitle").value.split("\n");
@@ -20,7 +20,7 @@
     //
     // }
     for ( i = 0; i < 8; i++) {
-      $("#subtitle" + i).delay(i * 500).animate({opacity:1}, 700);
+      $("#subtitle" + i).delay(i * 650 + 2000).animate({opacity:1}, 400);
     };
 
     // nav bar transparency on landing page, desktop only
