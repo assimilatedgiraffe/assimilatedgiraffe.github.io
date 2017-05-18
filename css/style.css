@@ -8,6 +8,8 @@ h1 {
   font-family: 'Noto Serif', serif;
 }
 
+
+/* ---landing page and animations----   */
 nav {
   opacity: 0;
 }
@@ -22,12 +24,14 @@ nav {
 
 .down-arrow {
   text-align: center;
+  opacity: 0;
+  padding: 70vh 0 0 50%;
+  position: absolute;
 }
 
 .down-arrow a {
   font-size: 30px;
   color: white;
-  padding: 20vh 0 0 0;
 }
 
 .navbar{
@@ -78,12 +82,13 @@ nav.navbar.nav-transparent {
 
 #home {
   background-image: linear-gradient(to right, red, orange 50%, black 50%, black);
-  background-size: 100% 100%;
+  /*background-size: 100% 100%;*/
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  /*background-attachment: fixed;*/
   background-color: #666;
   background-blend-mode: multiply;
-  padding: 20vh 0 5vh 0;
+  padding-top: 20vh;
+  padding-bottom: 5vh;
   color: white;
   font-size: 14px;
   height: 100vh
