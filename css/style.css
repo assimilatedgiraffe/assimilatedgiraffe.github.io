@@ -134,7 +134,7 @@ nav.navbar.nav-transparent {
 }
 
 .row-no-padding {
-  background-image: linear-gradient(to right, black, black 50%, black 50%, #010);
+  background-image: linear-gradient(to right, #010, black 50%, black 50%, #010);
 }
 
 /*#apps {
