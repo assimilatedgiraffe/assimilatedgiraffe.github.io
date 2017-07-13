@@ -7,7 +7,9 @@ body {
 h1 {
   font-family: 'Noto Serif', serif;
 }
+opacity: 0;
 
+/* ---landing page and animations----   */
 nav {
   opacity: 0;
 }
@@ -19,32 +21,45 @@ nav {
   font-family: monospace;
   opacity: 0;
 }
-
+/*
 .down-arrow {
+  opacity: 0;
+  position: absolute;
+  padding-top: 20px;
+  padding-left: 50%;
   text-align: center;
 }
 
 .down-arrow a {
   font-size: 30px;
   color: white;
-}
+  padding-top: 20px;
+}*/
 
 .navbar{
   /*min-height: 70px;*/
-  // Animation
+  /*Animation*/
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  /*background-color: black;*/
 }
 
 .navbar a {
   color: #FFFFFF;
 }
 
-nav.navbar.nav-scrolled {
-  background-color: black;
+nav.navbar.nav-transparent {
+
   min-height: 35px;
+  background-color: transparent;
+  border-width: 0px;
+  -webkit-box-shadow: 0px 0px;
+  box-shadow: 0px 0px;
 }
 
+.navbar.in {
+  background-color: black;
+}
 
 /*.container-fluid {
   position: relative;
@@ -69,14 +84,15 @@ nav.navbar.nav-scrolled {
 
 #home {
   background-image: linear-gradient(to right, red, orange 50%, black 50%, black);
-  background-size: 100% 100%;
+  /*background-size: 100% 100%;*/
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  /*background-attachment: fixed;*/
   background-color: #666;
   background-blend-mode: multiply;
-  padding: 20vh 0 5vh 0;
+  padding-top: 20vh;
+  padding-bottom: 5vh;
   color: white;
-  font-size: 14;
+  font-size: 14px;
   height: 100vh
 }
 
@@ -92,27 +108,42 @@ nav.navbar.nav-scrolled {
   opacity: 0;
 }
 
-#heading2 {
+/*#heading2 {
   opacity: 0;
   text-indent: 10vh
-}
+}*/
 
 .vertical-align {
   display: flex;
   align-items: center;
 }
 
-#websites {
+.heading-overlay {
+  position: absolute;
+  z-index: 15;
   background-color: #010;
+  padding: 7px !important;
+  margin: 0 !important;
+  /*opacity: 0.9;*/
 }
 
-#apps {
-  background-color: #100;
+.heading2 {
+  background-color: black;
+  margin: 0;
+  padding: 20px 10px 10px 10px !important;
+}
+
+.row-no-padding {
+  /*background-image: linear-gradient(to right, #010, black 50%, black 50%, #010);*/
+}
+
+/*#apps {
+  background-color: black;
 }
 
 #other-projects {
   background-color: #010;
-}
+}*/
 
 .thumbnail {
   padding: 20px;
@@ -127,6 +158,38 @@ nav.navbar.nav-scrolled {
 #other-projects:before {
   background-image: url('https://dl.dropboxusercontent.com/u/10118584/music-bg.jpg');
 }*/
+
+
+.contactbg {
+  /*background-image: url("../img/letters.jpg");*/
+  /*background-color:black;*/
+/*background-image:
+radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;*/
+  /*background-size: cover;*/
+  /*background-repeat: no-repeat;*/
+  background:
+radial-gradient(black 15%, transparent 16%) 0 0,
+radial-gradient(black 15%, transparent 16%) 8px 8px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+background-color:#282828;
+background-size:16px 16px;
+  background-attachment: fixed;
+}
+
+#contact {
+  background-image: linear-gradient(to right, red, orange 50%, black 50%, black);
+  background-color: #666;
+  background-blend-mode: multiply;
+  padding-top: 10vh;
+  padding-bottom: 5vh;
+}
+
 
 
 
@@ -156,12 +219,12 @@ nav.navbar.nav-scrolled {
     transition: all 0.5s ease;
 }
 
-.thumbnail2:hover img {
+.thumbnail2.hover img {
   -webkit-transform:translateZ(0) scale(1.20); /* Safari and Chrome */
   -moz-transform:scale(1.20); /* Firefox */
   -ms-transform:scale(1.20); /* IE 9 */
   -o-transform:translatZ(0) scale(1.20); /* Opera */
-  transform:translatZ(0) scale(1.20);
+  transform: scale(1.20);
 }
 
 .caption2 {
@@ -182,7 +245,89 @@ nav.navbar.nav-scrolled {
     transition: all 0.8s ease;
 }
 
-.thumbnail2:hover .caption2{
+.thumbnail2.hover .caption2{
     opacity:1;
     bottom: 0;
+}
+
+
+
+
+
+
+/*fancy scroll arrows*/
+.demo a {
+	position: absolute;
+	top: 90vh;
+	left: 50%;
+	z-index: 2;
+	display: inline-block;
+	-webkit-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	color: #fff;
+	font : normal 400 20px/1 'Josefin Sans', sans-serif;
+	letter-spacing: .1em;
+	text-decoration: none;
+	transition: opacity .3s;
+}
+.demo a:hover {
+	opacity: .5;
+}
+
+#section07 a {
+	padding-top: 80px;
+}
+#section07 a span {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 24px;
+	height: 24px;
+	margin-left: -12px;
+	border-left: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-animation: sdb07 8s infinite;
+	animation: sdb07 8s infinite;
+	opacity: 0;
+	box-sizing: border-box;
+	-webkit-animation-delay: 6.5s;
+	animation-delay: 6.5s;
+}
+/*#section07 a span:nth-of-type(1) {
+	-webkit-animation-delay: 3.5s;
+	animation-delay: 3.5s;
+}*/
+/*#section07 a span:nth-of-type(2) {
+	top: 16px;
+	-webkit-animation-delay: .15s;
+	animation-delay: .15s;
+}
+#section07 a span:nth-of-type(3) {
+	top: 32px;
+	-webkit-animation-delay: .3s;
+	animation-delay: .3s;
+}*/
+@-webkit-keyframes sdb07 {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes sdb07 {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
 }
