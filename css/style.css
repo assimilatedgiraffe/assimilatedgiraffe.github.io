@@ -7,7 +7,7 @@ body {
 h1 {
   font-family: 'Noto Serif', serif;
 }
-
+opacity: 0;
 
 /* ---landing page and animations----   */
 nav {
@@ -134,7 +134,7 @@ nav.navbar.nav-transparent {
 }
 
 .row-no-padding {
-  background-image: linear-gradient(to right, #010, black 50%, black 50%, #010);
+  /*background-image: linear-gradient(to right, #010, black 50%, black 50%, #010);*/
 }
 
 /*#apps {
@@ -158,6 +158,38 @@ nav.navbar.nav-transparent {
 #other-projects:before {
   background-image: url('https://dl.dropboxusercontent.com/u/10118584/music-bg.jpg');
 }*/
+
+
+.contactbg {
+  /*background-image: url("../img/letters.jpg");*/
+  /*background-color:black;*/
+/*background-image:
+radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;*/
+  /*background-size: cover;*/
+  /*background-repeat: no-repeat;*/
+  background:
+radial-gradient(black 15%, transparent 16%) 0 0,
+radial-gradient(black 15%, transparent 16%) 8px 8px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+background-color:#282828;
+background-size:16px 16px;
+  background-attachment: fixed;
+}
+
+#contact {
+  background-image: linear-gradient(to right, red, orange 50%, black 50%, black);
+  background-color: #666;
+  background-blend-mode: multiply;
+  padding-top: 10vh;
+  padding-bottom: 5vh;
+}
+
 
 
 
@@ -217,6 +249,11 @@ nav.navbar.nav-transparent {
     opacity:1;
     bottom: 0;
 }
+
+
+
+
+
 
 /*fancy scroll arrows*/
 .demo a {
