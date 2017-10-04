@@ -51,7 +51,7 @@ $(document).ready(function() {
     }
 
     // nav bar transparency on landing page, desktop only
-    if ($(document).scrollTop() < $(window).height() - 60 && !isMobile) {
+    if ($(document).scrollTop() < $(window).height() - 0 && !isMobile) {
       $('.navbar').addClass('nav-transparent');
     } else {
       $('.navbar').removeClass('nav-transparent');
@@ -75,7 +75,7 @@ $(function() {
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html, body').animate({
-          scrollTop: target.offset().top - 50
+          scrollTop: target.offset().top - 0
         }, 600);
         return false;
       }
