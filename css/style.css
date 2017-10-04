@@ -2,6 +2,12 @@ body {
   background-color:black;
   color: white;
   font-family: 'Roboto', sans-serif;
+  padding-bottom: 250px;
+  pointer-events: none;
+}
+
+body * {
+  pointer-events: auto;
 }
 
 h1 {
@@ -199,6 +205,10 @@ background-size:16px 16px;*/
   background-blend-mode: multiply;
   padding-top: 10vh;
   padding-bottom: 5vh;
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
+  z-index: -10;
 }
 
 
