@@ -6,7 +6,7 @@ $(document).ready(function() {
   // $("#subtitle1").delay(0000).animate({opacity:0.5}, 1000);
   $("#heading1").delay(6000).animate({opacity:0.5}, 3000);
   // $("#heading2").delay(2000).animate({opacity:0.5}, 1000);
-  $("nav").delay(6000).animate({opacity:1}, 3000);
+  $("nav").delay(5200).animate({opacity:1}, 3000);
   // $(".down-arrow").delay(3500).animate({opacity:1}, 3000);
   // $("#home").delay(1000).removeClass('darken');
   // var i= 0;
@@ -20,8 +20,14 @@ $(document).ready(function() {
   //
   // }
   for ( i = 0; i < 8; i++) {
-    $("#subtitle" + i).delay(i * 650 + 2000).animate({opacity:1}, 400);
+    $("#subtitle" + i).delay(i * 450 + 2000).animate({opacity:1}, 400);
   };
+
+  // nav transparent on load desktop only
+  if (!window.matchMedia('(max-width: 767px)').matches) {
+    $('.navbar').addClass('nav-transparent');
+  }
+
 
   //---thumbnail hover functionality on scroll for mobile---
   //replicate :hover to aviod CSS code duplication
@@ -51,7 +57,7 @@ $(document).ready(function() {
     }
 
     // nav bar transparency on landing page, desktop only
-    if ($(document).scrollTop() < $(window).height() - 60 && !isMobile) {
+    if ($(document).scrollTop() < $(window).height() - 0 && !isMobile) {
       $('.navbar').addClass('nav-transparent');
     } else {
       $('.navbar').removeClass('nav-transparent');
@@ -75,7 +81,7 @@ $(function() {
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html, body').animate({
-          scrollTop: target.offset().top - 50
+          scrollTop: target.offset().top - 0
         }, 600);
         return false;
       }
