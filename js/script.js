@@ -59,6 +59,7 @@ $(document).ready(function() {
     // nav bar transparency on landing page, desktop only
     if ($(document).scrollTop() < $(window).height() - 0 && !isMobile) {
       $('.navbar').addClass('nav-transparent');
+      $('.navbar-collapse').collapse();
     } else {
       $('.navbar').removeClass('nav-transparent');
     }
