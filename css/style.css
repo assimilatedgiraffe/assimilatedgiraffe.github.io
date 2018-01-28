@@ -239,7 +239,6 @@ background-size:16px 16px;*/
     }
     .navbar-nav {
         float: none!important;
-        margin-top: 7.5px;
     }
     .navbar-nav>li {
         float: none;
@@ -253,11 +252,21 @@ background-size:16px 16px;*/
     }
 }
 
+/*sidebar*/
 
-
-
-
-
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 50px;
+  z-index: 3005;
+}
+.sidebar a {
+  color: #fff;
+  background-color: inherit !important;
+}
+.sidebar a:focus {
+  background-color: black !important;
+}
 /*----thumbnails----*/
 
 .row-no-padding > [class*="col-"] {
