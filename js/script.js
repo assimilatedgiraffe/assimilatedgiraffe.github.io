@@ -69,6 +69,7 @@ $(document).ready(function() {
 
   // autohide mobile nav on click
   $('.sidebar a').click(function (e) {
+    var isMobile = window.matchMedia('(max-width: 767px)').matches;
     if (isMobile) {
       $('.sidebar').toggle('slide');
     }

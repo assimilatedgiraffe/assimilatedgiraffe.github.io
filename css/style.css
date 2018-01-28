@@ -6,6 +6,12 @@ body {
   pointer-events: none;
 }
 
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 500px;
+  }
+}
+
 body * {
   pointer-events: auto;
 }
@@ -200,17 +206,31 @@ background-size:16px 16px;*/
 }
 
 #contact {
-  background-image: linear-gradient(to right, red, orange 50%, black 50%, black);
-  background-color: #666;
-  background-blend-mode: multiply;
-  padding-top: 10vh;
-  padding-bottom: 5vh;
+  /*background-image: linear-gradient(to right, red, orange 50%, black 50%, black);*/
+  /*background-color: #666;*/
+  /*background-blend-mode: multiply;*/
+  /*padding-top: 10vh;*/
+  /*padding-bottom: 5vh;*/
   position: fixed;
   bottom: 0px;
   width: 100vw;
   z-index: -10;
 }
 
+#contact .col-sm-6 {
+  height: 250px;
+  padding-top: 50px;
+}
+
+.contact1 {
+  background-image: linear-gradient(to right, red, orange);
+  background-color: #666;
+  background-blend-mode: multiply;
+}
+
+.contact2 {
+  background-image: black;
+}
 
 
 
