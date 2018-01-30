@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  $('.sidebar').hide();
   $("#heading1").animate({opacity:1}, 2000);
   // $("#heading2").delay(2000).animate({opacity:1}, 3000);
   // $("#subtitle1").delay(4000).animate({opacity:1}, 3000);
@@ -59,6 +60,7 @@ $(document).ready(function() {
     // nav bar transparency on landing page, desktop only
     if ($(document).scrollTop() < $(window).height() - 0 && !isMobile) {
       $('.navbar').addClass('nav-transparent');
+      // $('.navbar-collapse').collapse();
     } else {
       $('.navbar').removeClass('nav-transparent');
     }
@@ -66,10 +68,11 @@ $(document).ready(function() {
   });
 
   // autohide mobile nav on click
-  $('.navbar-collapse a').click(function (e) {
-    if ($('.navbar-collapse.in').is(':visible')) {
-      $('.navbar-collapse').collapse('toggle');
-    };
+  $('.sidebar a').click(function (e) {
+    var isMobile = window.matchMedia('(max-width: 767px)').matches;
+    if (isMobile) {
+      $('.sidebar').toggle('slide');
+    }
   });
 });
 
@@ -88,3 +91,10 @@ $(function() {
     }
   });
 });
+
+// sidebar
+$(function(){
+	$('.navbar-toggle').on('click',function(){
+        $('.sidebar').toggle('slide');
+	})
+})

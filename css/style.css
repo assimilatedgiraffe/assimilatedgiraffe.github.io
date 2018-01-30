@@ -6,6 +6,12 @@ body {
   pointer-events: none;
 }
 
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 500px;
+  }
+}
+
 body * {
   pointer-events: auto;
 }
@@ -135,7 +141,7 @@ nav.navbar.nav-transparent {
 }
 
 .heading2 {
-  color: #9d9d9d;
+  color: #9ca5a0;
   margin: 0;
   padding: 3px 10px 10px 10px !important;
   /*z-index: 3000;*/
@@ -195,25 +201,92 @@ radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
 radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
 background-color:#282828;
 background-size:16px 16px;*/
-  background-image: linear-gradient(to right, black, #222);
+  background-image: linear-gradient(to right, black, #282d2b);
   background-attachment: fixed;
 }
 
 #contact {
-  background-image: linear-gradient(to right, red, orange 50%, black 50%, black);
-  background-color: #666;
-  background-blend-mode: multiply;
-  padding-top: 10vh;
-  padding-bottom: 5vh;
+  /*background-image: linear-gradient(to right, red, orange 50%, black 50%, black);*/
+  /*background-color: #666;*/
+  /*background-blend-mode: multiply;*/
+  /*padding-top: 10vh;*/
+  /*padding-bottom: 5vh;*/
   position: fixed;
   bottom: 0px;
   width: 100vw;
   z-index: -10;
 }
 
+#contact .col-sm-6 {
+  height: 250px;
+  padding-top: 50px;
+}
+
+.contact1 {
+  background-image: linear-gradient(to right, red, orange);
+  background-color: #666;
+  background-blend-mode: multiply;
+}
+
+.contact2 {
+  background-image: black;
+}
 
 
 
+/*bootstrap nav collapse breakpoint override*/
+
+@media (max-width: 1600px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+}
+
+/*sidebar*/
+
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 50px;
+  z-index: 3005;
+}
+.sidebar a {
+  color: #fff;
+  background-color: inherit !important;
+}
+.sidebar a:focus {
+  background-color: black !important;
+}
 /*----thumbnails----*/
 
 .row-no-padding > [class*="col-"] {
